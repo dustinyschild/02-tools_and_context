@@ -16,9 +16,17 @@ describe('Module', function(){
     });
   });
   describe('#reduceFunction()',function(){
-    it('shoud return a single numerical value', function(done){
+    it('shoud return the integer 6', function(done){
       sut.reduceFunction([1,2,3], function(reduceVal){
         expect(reduceVal).to.be.a('number');
+        expect(reduceVal).to.equal(6);
+        done();
+      });
+    });
+    it('shoud return the integer 13', function(done){
+      sut.reduceFunction([5,2,6], function(reduceVal){
+        expect(reduceVal).to.be.a('number');
+        expect(reduceVal).to.equal(13);
         done();
       });
     });
