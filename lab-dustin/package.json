@@ -4,7 +4,8 @@
   "description": "![DV](https://www.deltavcodeschool.com/wp-content/uploads/DeltaV.png) 02: Tools and Context\r ======",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "lint": "eslint --fix ./test.lint.js"
   },
   "repository": {
     "type": "git",
