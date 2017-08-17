@@ -1,1 +1,1 @@
-console.log('you forgot the semicolon')
+console.log('you forgot the semicolon');
