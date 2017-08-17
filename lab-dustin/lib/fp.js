@@ -9,3 +9,8 @@ exports.reduceFunction = function(array, callback){
   console.log(reduceVal);
   callback(reduceVal);
 };
+
+exports.filterFunction = function(array, func, callback){
+  console.log(array);
+  callback(array);
+};

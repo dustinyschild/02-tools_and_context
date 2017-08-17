@@ -31,4 +31,22 @@ describe('Module', function(){
       });
     });
   });
+  describe('#filterFunction()', function(){
+    it('should return an array of all passing values', function(done){
+      sut.filterFunction([1,3,6,2,8,10,3], x => x > 5, function(passingValues){
+        expect(passingValues).to.be.an('array');
+        expect(passingValues)
+          .to.include(6)
+          .and.include(8)
+          .and.include(10)
+          .and.not.include(1)
+          .and.not.include(3)
+          .and.not.include(2)
+          .and.not.include(3);
+        done();
+      });
+    });
+  });
+  //describe('#concatFunction()');
+  //describe('#spliceFunction()');
 });
