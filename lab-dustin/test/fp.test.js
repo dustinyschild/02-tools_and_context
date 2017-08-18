@@ -47,6 +47,13 @@ describe('Module', function(){
       });
     });
   });
-  //describe('#concatFunction()');
+  describe('#concatFunction()', function(){
+    it('should return array containing all argument array values', function(done){
+      sut.concatFunction(function(concatArray){
+        expect(concatArray).to.deep.members([1,2,3,4,5,6]);
+        done();
+      },[1,2,3],[4,5,6]);
+    });
+  });
   //describe('#spliceFunction()');
 });

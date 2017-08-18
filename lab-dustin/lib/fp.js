@@ -11,6 +11,17 @@ exports.reduceFunction = function(array, callback){
 };
 
 exports.filterFunction = function(array, func, callback){
-  console.log(array);
-  callback(array);
+  var filteredArray = Array.prototype.filter.call(array, func);
+  console.log(filteredArray);
+  callback(filteredArray);
+};
+
+exports.concatFunction = function(callback){
+  for (let i = 1; i < arguments.length; i++){
+    //var concatArray = Array.prototype.concat.call();
+    console.log(arguments[i]);
+  }
+  var newArray = [1,2,3,4,5,6];
+  callback(newArray);
+  //callback(concatArray);
 };
